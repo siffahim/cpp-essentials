@@ -1,1 +1,2 @@
-Wrong input!
+5
+Hello World!
