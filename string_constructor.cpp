@@ -11,9 +11,11 @@ int main(){
     //string s("Hello World", 5); // this way string will be resize
 
     //way three
-    string s = "Welcome To";
-    string t(s, 5);
+    // string s = "Welcome To";
+    // string t(s, 5);
 
+    //this a will print 5times
+    string t(5, 'a');
     cout << t << endl;
 
     return 0;
