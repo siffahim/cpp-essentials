@@ -1,3 +1,3 @@
-Salam 4 60
-Rafiq 65 80
-Barqat 6 89
+Salam Ahmed 4 60
+Rafiq Khan 65 80
+Barqat Ali 6 89
