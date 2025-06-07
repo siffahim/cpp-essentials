@@ -1,5 +1,3 @@
-H
-e
-l
-l
-o
+Salam 4 60
+Rafiq 65 80
+Barqat 6 89
