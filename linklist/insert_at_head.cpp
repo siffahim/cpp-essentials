@@ -11,7 +11,7 @@ class Node{
         this->next = NULL;
     }
 };
-
+///
 void insert_at_head(Node* &head, int val){
     Node *newNode = new Node(val);
     newNode->next = head;
