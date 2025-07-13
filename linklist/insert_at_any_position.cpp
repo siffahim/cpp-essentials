@@ -4,7 +4,7 @@ using namespace std;
 class Node{
     public:
         int val;
-        Node* next;
+        Node *next;
     
     Node(int val){
         this->val = val;
@@ -12,13 +12,19 @@ class Node{
     }
 };
 
-void insert_at_head(Node* &head, int val){
+
+void insert_at_any_pos(Node* &head, int idx, int val){
     Node *newNode = new Node(val);
-    newNode->next = head;
-    head = newNode;
+    Node *temp = head;
+    for (int i = 1; i < idx; i++){
+        temp = temp->next;
+    }
+    newNode->next = temp->next;
+    temp->next = newNode;
 }
 
-void print_linklist(Node* head) {
+
+void print_linklist(Node* head){
     Node *temp = head;
     while(temp != NULL){
         cout << temp->val << endl;
@@ -28,13 +34,14 @@ void print_linklist(Node* head) {
 
 int main(){
     Node *head = new Node(10);
-    Node *a = new Node(50);
-    Node *b = new Node(75);
+    Node *a = new Node(20);
+    Node *b = new Node(30);
 
     head->next = a;
     a->next = b;
 
-    insert_at_head(head, 100);
+    insert_at_any_pos(head, 2, 100);
+    insert_at_any_pos(head, 2, 200);
     print_linklist(head);
 
     return 0;
