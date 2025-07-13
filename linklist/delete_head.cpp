@@ -32,6 +32,12 @@ void print_linklist(Node* head){
     }
 }
 
+void delete_head(Node* &head){
+    Node *deleteNode = head;
+    head = head->next;
+    delete deleteNode;
+}
+
 int main(){
     Node *head = NULL;
     Node *tail = NULL;
@@ -45,7 +51,8 @@ int main(){
         insert_at_tail(head, tail, val);
     }
 
-
+    delete_head(head);
+    delete_head(head);
     print_linklist(head);
 
     return 0;
