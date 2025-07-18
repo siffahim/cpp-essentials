@@ -6,9 +6,8 @@ class Node{
         int val;
         Node *next;
         Node *prev;
-    
     Node(int val){
-        this->val = val; 
+        this->val = val;
         this->next = NULL;
         this->prev = NULL;
     }
@@ -17,18 +16,21 @@ class Node{
 void print_forward(Node* head){
     Node *temp = head;
     while(temp != NULL){
-        cout << temp->val << " ";
+        cout << temp->val << endl;
         temp = temp->next;
     }
-    cout << endl;
 }
 
-void print_backward(Node* tail){
-    Node *temp = tail;
-    while(temp != NULL){
-        cout << temp->val << " ";
-        temp = temp->prev;
+void insert_at_head(Node* &head, Node* &tail, int val){
+    Node *newnode = new Node(val);
+    if(head == NULL){
+        head = newnode;
+        tail = newnode;
+        return;
     }
+    newnode->next = head;
+    head->prev = newnode;
+    head = newnode;
 }
 
 int main(){
@@ -42,8 +44,8 @@ int main(){
     a->next = tail;
     tail->prev = a;
 
+    insert_at_head(head,tail, 100);
     print_forward(head);
-    print_backward(tail);
 
     return 0;
 }

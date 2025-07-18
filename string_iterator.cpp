@@ -14,6 +14,8 @@ int main(){
         cout << *it << endl;
     }
 
+    //string:: iterator instant of this we can use 'auto' keyword
+
     // cout << *s.begin() << endl;
     // cout << *s.end() << endl;
     return 0;
